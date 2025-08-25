@@ -1,0 +1,405 @@
+/* Responsive overrides only. No base style changes. */
+
+/* ============ Base container width tweaks for large screens ============ */
+@media (min-width: 1440px) {
+    .banner {
+        padding: 70px 90px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .banner {
+        padding: 90px 120px;
+    }
+
+    .services-section {
+        max-width: 100vw;
+    }
+
+    .gallery-container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .banner {
+        padding: 110px 160px;
+    }
+
+    .banner-left h1 {
+        font-size: 48px;
+    }
+
+    .banner-left p {
+        font-size: 20px;
+    }
+}
+
+/* ============ Laptop/MacBook adjustments (<= 1366px) ============ */
+@media (max-width: 1366px) {
+    .banner {
+        padding: 50px 50px;
+    }
+
+    .banner-left {
+        max-width: 50%;
+    }
+
+    .spark-analytical-image {
+        transform: translateX(-20px);
+    }
+}
+
+/* ============ Tablet landscape (<= 1024px) ============ */
+@media (max-width: 1024px) {
+    .header-center ul {
+        gap: 18px;
+    }
+
+    .banner {
+        padding: 45px 36px;
+        gap: 24px;
+    }
+
+    .banner-left {
+        padding: 32px 24px;
+    }
+
+    .banner-left h1 {
+        font-size: 34px;
+    }
+
+    .banner-left p {
+        font-size: 16px;
+    }
+
+    .features {
+        gap: 12px;
+    }
+
+    .feature-box {
+        padding: 10px 8px;
+    }
+
+    .accreditations-container {
+        gap: 20px;
+    }
+
+    .logo-box {
+        padding: 18px;
+    }
+
+    .logo-box img {
+        max-width: 100px;
+    }
+
+    .spark-analytical-content {
+        padding: 16px;
+    }
+
+    .spark-analytical-image {
+        transform: translateX(-20px);
+    }
+
+    .services-section h2 {
+        font-size: 24px;
+    }
+
+    .services-desc {
+        font-size: 15px;
+        padding: 0 16px;
+    }
+
+    .gallery-section {
+        padding: 50px 24px 30px;
+    }
+
+    .gallery-container {
+        gap: 22px;
+    }
+}
+
+/* ============ Tablet portrait (<= 768px) ============ */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: center;
+        border-bottom-right-radius: 0;
+    }
+
+    .header-center {
+        order: 3;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .header-center ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 6px 0;
+    }
+
+    .header-right {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom-left-radius: 0;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .banner-left,
+    .banner-right {
+        max-width: 100%;
+    }
+
+    .banner-left {
+        padding: 24px 18px;
+    }
+
+    .banner-left h1 {
+        font-size: 28px;
+    }
+
+    .banner-left p {
+        font-size: 15px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+
+    .feature-box {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .accreditations-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .accreditations-image img {
+        max-width: 100%;
+    }
+
+    .accreditations-logos {
+        justify-content: center;
+    }
+
+    .accreditations-text {
+        padding: 0 10px;
+    }
+
+    .left-right-con {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .spark-analytical-content {
+        border-radius: 24px;
+        max-height: none;
+    }
+
+    .spark-analytical-image {
+        transform: none;
+        justify-content: center;
+    }
+
+    .spark-analytical-image img {
+        min-width: 0;
+        max-width: 100%;
+        border-radius: 24px;
+    }
+
+    .service-subtabs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services-carousel {
+        margin-left: 0;
+    }
+
+    .carousel-arrows {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+    .google-review-section {
+        padding: 20px 14px;
+    }
+
+    .review-card {
+        height: auto;
+    }
+
+    .review-footer {
+        padding: 0 8px;
+    }
+
+    .footer-middle {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* ============ Mobile (<= 576px) ============ */
+@media (max-width: 576px) {
+    .header-right {
+        gap: 10px;
+        padding: 8px 12px;
+    }
+
+    .contact {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+
+    .banner {
+        padding: 28px 14px;
+    }
+
+    .banner-left {
+        padding: 18px 14px;
+    }
+
+    .banner-left h1 {
+        font-size: 24px;
+    }
+
+    .banner-left p {
+        font-size: 14px;
+    }
+
+    .accreditations img {
+        height: 46px;
+    }
+
+    .logo-box {
+        padding: 14px;
+    }
+
+    .logo-box img {
+        max-width: 90px;
+    }
+
+    .spark-btn {
+        padding: 10px 22px 10px 26px;
+        font-size: 1rem;
+    }
+
+    .services-tabs {
+        gap: 12px;
+    }
+
+    .services-tab-btn {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .service-subtabs {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .service-subtab {
+        padding: 0 10px;
+    }
+
+    .service-card {
+        margin: 12px 10px;
+        min-width: 240px;
+        padding: 14px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card-para {
+        font-size: 14px;
+    }
+
+    .services-know-more {
+        padding: 10px 56px 10px 24px;
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .gallery-section {
+        padding: 36px 12px 20px;
+    }
+
+    .gallery-section::before,
+    .gallery-section::after {
+        display: none;
+    }
+
+
+    .gallery-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .rating-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .review-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .footer-box {
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-title {
+        margin-bottom: 0;
+    }
+
+    .footer-middle {
+        grid-template-columns: 1fr;
+    }
+}
