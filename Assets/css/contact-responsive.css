@@ -1,0 +1,82 @@
+/* Responsive adjustments for Contact page only (non-destructive) */
+
+@media (max-width: 1200px) {
+    .contact-banner {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-banner {
+        padding: 22px;
+    }
+
+    .contact-container {
+        gap: 20px;
+    }
+
+    .contact-left h3 {
+        font-size: 22px;
+    }
+
+    .contact-right h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .contact-right form input,
+    .contact-right form textarea {
+        width: 100%;
+    }
+
+    .find-us-container {
+        flex-direction: column;
+    }
+
+    .find-us-image {
+        width: 100%;
+        display: none;
+    }
+
+    .find-us-map iframe {
+        width: 100%;
+        height: 320px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-banner p {
+        font-size: 12px;
+    }
+
+    .contact-banner h2 {
+        font-size: 22px;
+    }
+
+    .contact-left h3 {
+        font-size: 20px;
+    }
+
+    .contact-left p {
+        font-size: 13px;
+    }
+
+    .contact-right h3 {
+        font-size: 18px;
+    }
+
+    .textarea-wrapper .char-count {
+        font-size: 11px;
+    }
+}
