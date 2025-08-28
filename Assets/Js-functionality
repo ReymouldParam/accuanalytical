@@ -1,16 +1,24 @@
-// Highlight current nav item based on URL
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".header-center a");
-    const currentPage = window.location.pathname.split("/").pop(); // get filename (e.g. "about-us.html")
+    let currentPage = window.location.pathname.split("/").pop();
 
+    if (currentPage === "" || currentPage === "/") {
+        currentPage = "index.html"; // default to home
+    }
+
+    // Highlight on page load
     navLinks.forEach(link => {
         const linkPage = link.getAttribute("href").split("/").pop();
-
-        if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+        if (linkPage === currentPage) {
             link.parentElement.classList.add("active");
         } else {
             link.parentElement.classList.remove("active");
         }
+
+        // Highlight immediately on click (no flicker on Home)
+        link.addEventListener("click", () => {
+            navLinks.forEach(l => l.parentElement.classList.remove("active"));
+            link.parentElement.classList.add("active");
+        });
     });
 });
-
