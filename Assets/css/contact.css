@@ -1,0 +1,278 @@
+ /* Banner */
+ .contact-bg {
+     width: 100%;
+     height: 100%;
+     background-image: url("../images/contact-page-bg.png");
+     background-size: cover;
+     /* ensures the wave/logo is visible */
+     background-position: center right;
+     /* positions it like in screenshot */
+     background-repeat: no-repeat;
+     padding-top: 2%;
+
+ }
+
+ .contact-banner {
+     background: #f6a821;
+     color: #fff;
+     text-align: center;
+     padding: 15px 20px;
+     border-radius: 20px;
+     width: 96%;
+     margin: auto;
+ }
+
+ .contact-banner p {
+     margin: 0;
+     font-size: 13px;
+ }
+
+ .contact-banner h2 {
+     margin: 6px 0 0;
+     font-size: 20px;
+     font-weight: 700;
+     text-transform: uppercase;
+ }
+
+ /* Main Contact Container */
+ .contact-container {
+     width: 96%;
+     margin: 20px auto;
+     background: #1a1a1a;
+     border-radius: 15px;
+     display: flex;
+     flex-wrap: wrap;
+     overflow: hidden;
+ }
+
+ /* Left Info with Glass Effect */
+ .contact-left {
+     flex: 1;
+     padding: 30px;
+     color: #fff;
+     min-width: 300px;
+     position: relative;
+     margin: 10px;
+
+     /* Glassmorphism */
+     background: rgba(0, 0, 0, 0.55);
+     /* transparent black glass */
+     border: 1px solid rgba(255, 255, 255, 0.25);
+     backdrop-filter: blur(12px);
+     -webkit-backdrop-filter: blur(12px);
+
+     /* Keep wave/logo image */
+     background-image: url("../images/about-us-section-bg.png");
+     background-size: contain;
+     background-position: center right;
+     background-repeat: no-repeat;
+
+     border-radius: 20px;
+ }
+
+ .contact-left h3 {
+     font-size: 22px;
+     font-weight: 700;
+     color: #f6a821;
+     margin-bottom: 10px;
+ }
+
+ .contact-left p {
+     font-size: 14px;
+     color: #ccc;
+     line-height: 1.6;
+     margin-bottom: 20px;
+ }
+
+ .divider {
+     border-top: 1px solid #666;
+     margin: 15px 0;
+ }
+
+ .contact-left .contact-info {
+     margin-bottom: 15px;
+ }
+
+ .contact-left .contact-info strong {
+     display: block;
+     font-size: 14px;
+     margin-bottom: 4px;
+     color: #fff;
+ }
+
+ .contact-left .contact-info a {
+     color: #fff;
+     font-weight: 600;
+     text-decoration: none;
+ }
+
+ /* Right Form */
+ .contact-right {
+     flex: 1.2;
+     padding: 30px;
+     color: #fff;
+     min-width: 320px;
+ }
+
+ .contact-right h3 {
+     font-size: 20px;
+     font-weight: 700;
+     margin-bottom: 20px;
+ }
+
+ .contact-right form {
+     display: flex;
+     flex-direction: column;
+     gap: 18px;
+ }
+
+ .contact-right input,
+ .contact-right textarea {
+     width: 100%;
+     padding: 8px 5px;
+     border: none;
+     border-bottom: 1px solid #444;
+     background: transparent;
+     color: #fff;
+     font-size: 14px;
+     outline: none;
+ }
+
+ .contact-right textarea {
+     min-height: 80px;
+     resize: none;
+ }
+
+ .form-submit {
+     display: flex;
+     justify-content: flex-end;
+ }
+
+ .contact-right button {
+     background: transparent;
+     border: 1px solid #f6a821;
+     color: #fff;
+     padding: 8px 20px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+     transition: 0.3s;
+ }
+
+ .contact-right button:hover {
+     background: #f6a821;
+     color: #000;
+ }
+
+ /* Outer Wrapper */
+ .find-us {
+     display: flex;
+     justify-content: center;
+     background: transparent;
+     padding-bottom: 20px;
+ }
+
+ /* Rounded container with 3 columns */
+ .find-us-container {
+     display: grid;
+     grid-template-columns: 1fr auto 1fr;
+     width: 95%;
+     border-radius: 46px;
+     overflow: hidden;
+     background: #fff;
+     /* middle area stays white */
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Left image */
+ .find-us-image img {
+     /* width: 100%; */
+     height: 300px;
+     object-fit: contain;
+     display: block;
+ }
+
+ /* Middle text */
+ .find-us-header {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #fff;
+     padding: 20px;
+     text-align: center;
+ }
+
+ .find-us-header h3 {
+     font-size: 34px;
+     font-weight: 700;
+     color: #000;
+ }
+
+ .find-us-header span {
+     font-size: 26px;
+     font-weight: 800;
+     margin-left: 8px;
+ }
+
+ /* Right map */
+ .find-us-map iframe {
+     width: 100%;
+     height: 100%;
+     min-height: 280px;
+     display: block;
+     border: none;
+ }
+
+ .textarea-wrapper {
+     position: relative;
+     width: 100%;
+ }
+
+ .textarea-wrapper textarea {
+     width: 100%;
+     padding: 12px;
+     font-size: 14px;
+     border: 1px solid #444;
+     border-radius: 6px;
+     resize: none;
+     min-height: 100px;
+     background: transparent;
+     color: #fff;
+     /* adjust if dark bg */
+ }
+
+ .char-count {
+     font-size: 12px;
+     color: #aaa;
+     text-align: right;
+     margin-top: 4px;
+ }
+
+
+ /* Responsive */
+ @media (max-width: 900px) {
+     .find-us-container {
+         grid-template-columns: 1fr;
+     }
+
+     .find-us-header {
+         order: -1;
+         /* bring text on top */
+     }
+
+     .find-us-map iframe {
+         min-height: 220px;
+     }
+ }
+
+
+ @media (max-width: 900px) {
+     .contact-container {
+         flex-direction: column;
+     }
+
+     .contact-left {
+         border-right: none;
+         border-bottom: 1px solid #333;
+     }
+ }

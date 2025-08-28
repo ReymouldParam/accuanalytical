@@ -1,0 +1,16 @@
+// Highlight current nav item based on URL
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".header-center a");
+    const currentPage = window.location.pathname.split("/").pop(); // get filename (e.g. "about-us.html")
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+
+        if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+            link.parentElement.classList.add("active");
+        } else {
+            link.parentElement.classList.remove("active");
+        }
+    });
+});
+
