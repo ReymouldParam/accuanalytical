@@ -32,9 +32,14 @@ body {
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 10px;
     font-weight: 400;
+}
+
+.Banner-card-title {
+    font-size: 55px;
+
 }
 
 /* ********** Services Section ********* */
@@ -91,11 +96,13 @@ body {
 }
 
 .services-banner p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
     max-width: 800px;
     margin: auto;
+    font-weight: 500;
 }
+
 
 /* Section Title */
 .subcategory-title {
@@ -136,7 +143,7 @@ body {
 }
 
 .service-card h4 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #f6a821;
     margin-bottom: 6px;
@@ -144,9 +151,10 @@ body {
 }
 
 .service-card p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     color: #333;
+    font-weight: 500;
 }
 
 /* View More */

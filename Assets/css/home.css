@@ -348,7 +348,7 @@
 }
 
 .spark-analytical-content h1 {
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
     color: #232323;
@@ -356,10 +356,11 @@
 }
 
 .spark-analytical-content p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     color: #373737;
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .spark-analytical-content ul {
@@ -485,7 +486,7 @@
 
 .services-section h2 {
     text-align: center;
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 700;
     color: #232323;
     margin-top: 20px;
@@ -495,11 +496,11 @@
 
 .services-desc {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     color: #232323;
     margin-bottom: 15px;
     line-height: 1.5;
-    font-weight: normal;
+    font-weight: 500;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -525,7 +526,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 700;
     padding: 5px;
 }
 
@@ -562,6 +563,8 @@
     cursor: pointer;
     padding: 0 22px;
     position: relative;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .service-subtab.active {
@@ -701,10 +704,11 @@
 }
 
 .gallery-section h1 {
-    font-size: 2.1rem;
+    font-size: 32px;
     margin-bottom: 30px;
     color: #f4b235;
     font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .gallery-container {

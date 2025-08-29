@@ -21,7 +21,7 @@ body {
     background: rgba(0, 0, 0, 0.3);
     /* semi-transparent overlay */
     border-radius: 20px;
-    padding: 40px 60px;
+    padding: 25px 40px;
     text-align: center;
     color: #fff;
     max-width: 80%;
@@ -32,9 +32,14 @@ body {
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 10px;
     font-weight: 400;
+}
+
+.Banner-card-title {
+    font-size: 55px;
+
 }
 
 
@@ -71,13 +76,14 @@ body {
     border-radius: 12px;
     padding: 15px 20px;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
+    line-height: 1.2;
 }
 
 .feature-card img {
     display: block;
-    height: 45px;
+    height: 50px;
     margin: 0 auto 12px;
 }
 
@@ -106,10 +112,11 @@ body {
 }
 
 .content p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
     color: #ccc;
     margin-bottom: 25px;
+    font-weight: 500;
 }
 
 .buttons {
@@ -159,8 +166,9 @@ body {
 }
 
 .about-text h3 {
-    font-size: 20px;
+    font-size: 26px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .about-text p {
@@ -168,6 +176,7 @@ body {
     line-height: 1.6;
     color: #ccc;
     margin-bottom: 18px;
+    font-weight: 500;
 }
 
 .about-image {
@@ -232,9 +241,9 @@ body {
 }
 
 .accreditations-text h2 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .accreditations-text ul {
@@ -244,12 +253,14 @@ body {
 
 .accreditations-text ul li {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+
 }
 
 .accreditations-text ul li a {
     color: #000;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* =========================
@@ -280,8 +291,8 @@ body {
 }
 
 .stat-card h4 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 26px;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -290,13 +301,13 @@ body {
     line-height: 1.5;
     margin-bottom: 15px;
     color: #ddd;
+    font-weight: 500;
 }
 
 .stat-number {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 700;
     color: #f6a821;
-    /* default orange */
 }
 
 .stat-number.orange {
@@ -370,10 +381,11 @@ body {
 }
 
 .process-text p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
     color: #444;
+    font-weight: 500;
 }
 
 .step h3 {
@@ -388,6 +400,7 @@ body {
     color: #444;
     margin-bottom: 20px;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .process-image {
