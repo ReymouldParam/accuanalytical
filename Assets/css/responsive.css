@@ -38,7 +38,7 @@
 /* ============ Laptop/MacBook adjustments (<= 1366px) ============ */
 @media (max-width: 1366px) {
     .banner {
-        padding: 50px 50px;
+        padding: 3% 3%;
     }
 
     .banner-left {
