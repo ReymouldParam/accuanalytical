@@ -165,11 +165,13 @@
             <div class="footer-box">
                 <h3 class="title">Get In Touch</h3>
             </div>
-
             <!-- Right: Newsletter -->
             <div class="footer-box newsletter">
-                <input type="email" placeholder="Enter Your Email" class="email-input">
-                <button class="send-btn">Send</button>
+                <form action="footer-email.php" method="POST">
+                    <input type="email" name="newsletter_email" placeholder="Enter Your Email" class="email-input"
+                        required>
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
             </div>
         </div>
 
@@ -224,6 +226,19 @@
             </p>
         </div>
     </footer>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
+    </div>
+    <!-- WhatsApp Floating Icon -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/7093288864" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
     <script>
         const textarea = document.getElementById("message");
         const charCount = document.getElementById("charCount");

@@ -705,8 +705,11 @@
 
             <!-- Right: Newsletter -->
             <div class="footer-box newsletter">
-                <input type="email" placeholder="Enter Your Email" class="email-input">
-                <button class="send-btn">Send</button>
+                <form action="footer-email.php" method="POST">
+                    <input type="email" name="newsletter_email" placeholder="Enter Your Email" class="email-input"
+                        required>
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
             </div>
         </div>
 
@@ -761,6 +764,19 @@
             </p>
         </div>
     </footer>
+    <!-- popup -->
+    <div id="popup-message" class="popup">
+        <h2 id="popup-heading" class="pop-up-heading"></h2>
+        <p id="popup-para" class="pop-up-para"></p>
+        <button id="close-popup" class="close-btn">Close</button>
+    </div>
+    </div>
+    <!-- WhatsApp Floating Icon -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/7093288864" target="_blank">
+            <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -861,8 +877,6 @@
             document.querySelectorAll(".carousel-wrapper").forEach(w => setupCarousel(w));
         });
     </script>
-
-
     <!-- slick Carousel -->
     <!-- Slick JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -972,7 +986,6 @@
             $('.main-tab').first().trigger('click');
         });
     </script>
-
     <!-- Review Testimonial section -->
     <script>
         $(document).ready(function () {

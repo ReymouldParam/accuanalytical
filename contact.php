@@ -8,8 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $testing_type = htmlspecialchars(trim($_POST['testing_type']));
     $message = htmlspecialchars(trim($_POST['message']));
 
-    $to1 = "sales@tirupatiaquatech.in";
-    $to2 = "tirupatiaquatech@yahoo.com";
+    $to1 = "naresh.narnapati@reymould.com";
+    $to2 = "reymould.social@gmail.com";
     $subject = "Enquiry from AquaSite Website";
 
     $body = "Name: $name\n";

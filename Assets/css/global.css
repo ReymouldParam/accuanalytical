@@ -225,3 +225,100 @@ body {
     font-size: 13px;
     color: #ccc;
 }
+
+
+
+/**************************************************** pop up card *****************************/
+.popup {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 500px;
+    background-color: #ffffff;
+    background-image: url(../images/Background.png);
+    background-size: cover;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    padding: 30px 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    z-index: 1000;
+    text-align: center;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+/* Heading */
+.pop-up-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #004080;
+    /* Theme orange */
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.pop-up-para {
+    color: #000;
+    /* Olive green */
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* Button */
+.close-btn {
+    background-color: #000;
+    /* Olive green */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.close-btn:hover {
+    background-color: #004080;
+}
+
+/********************* whatsapp container */
+.whatsapp-container {
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    text-align: right;
+    height: 60px;
+    z-index: 9999;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: auto;
+}
+
+.whatsapp-container i {
+    font-size: 48px;
+    color: #25D366;
+    justify-content: flex-end;
+    animation: whatsappbeat 1.5s infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes whatsappbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
