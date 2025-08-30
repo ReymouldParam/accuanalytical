@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/dev.accuanalytical.com
+    - export DEPLOYPATH=/home/pk5ixxuh5zp9/public_html/accuanalytical.reymould.com
     - /bin/cp -R * $DEPLOYPATH
