@@ -166,28 +166,62 @@ body {
 
 .email-input {
     flex: 1;
-    padding: 12px 16px;
+    padding: 8px 12px;
     border-radius: 10px;
     border: none;
     font-size: 14px;
     outline: none;
+    width: 280px;
 }
 
 .send-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1.5px solid #ff9900;
     background: transparent;
     color: #fff;
     font-size: 14px;
-    padding: 10px 25px;
+    padding: 5px 12px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    overflow: hidden;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+/* liquid background */
+.send-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* start hidden */
+    width: 100%;
+    height: 100%;
+    background: #ff9900;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* keep text above */
+.send-btn span {
+    position: relative;
+    z-index: 1;
 }
 
 .send-btn:hover {
-    background: #ff9900;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     color: #111;
 }
+
+.send-btn:hover::before {
+    left: 0;
+    /* slide background in from left to right */
+}
+
 
 /* Middle: Categories in 4 Columns */
 .footer-middle {

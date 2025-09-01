@@ -162,7 +162,9 @@
 }
 
 .btn-light {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #ffffff;
     padding: 8px 20px;
@@ -170,15 +172,45 @@
     color: #fff;
     font-weight: 600;
     text-decoration: none;
-    transition: 0.3s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+/* liquid background */
+.btn-light::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* start hidden */
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* keep text above */
+.btn-light span {
     position: relative;
     z-index: 1;
 }
 
+/* hover effect */
 .btn-light:hover {
-    background: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     color: #002b66;
 }
+
+.btn-light:hover::before {
+    left: 0;
+    /* slide background in */
+}
+
 
 .accreditations {
     margin-top: 25px;
@@ -245,7 +277,7 @@
 
 /* *************************** Section 2 */
 .accreditations-section {
-    background: #f4b235;
+    background: #f5a000;
     width: 90%;
     margin: 2% auto;
     /* orange shade */
@@ -379,44 +411,42 @@
 .spark-btn {
     display: flex;
     align-items: center;
-    /* margin-top: 18px; */
-    padding: 8px;
-    color: #f4b235;
+    padding: 5px 12px;
+    color: #f5a000;
     background: #fff;
-    border: 1px solid #f4b235;
-    border-radius: 13px;
+    border: 1px solid #f5a000;
+    border-radius: 0.5rem;
     font-size: 14px;
-    /* font-weight: 500; */
     text-decoration: none;
     box-sizing: border-box;
-    transition: background 0.2s, color 0.2s;
-    width: fit-content;
-    gap: 9px;
     position: relative;
     overflow: hidden;
-
+    width: fit-content;
+    transition: color 0.3s ease;
+    z-index: 1;
 }
 
-.spark-btn-accent {
-    width: 32px;
-    height: 8px;
-    background: linear-gradient(90deg, #f4b235 78%, transparent);
-    border-radius: 0 40px 40px 0;
+/* liquid background effect */
+.spark-btn::before {
+    content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    /* half-covered accent, as in image corner */
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #f5a000;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
 }
 
-.spark-btn span {
-    /* hides accent text layout issues */
-}
-
-/* Button hover */
+/* text color change */
 .spark-btn:hover {
-    background: #f4b235;
     color: #fff;
+}
+
+/* animate background slide */
+.spark-btn:hover::before {
+    left: 0;
 }
 
 /* Image column */
@@ -446,8 +476,8 @@
     bottom: 0;
     width: 260px;
     height: 16px;
-    border-bottom: 4px solid #f4b235;
-    border-right: 4px solid #f4b235;
+    border-bottom: 4px solid #f5a000;
+    border-right: 4px solid #f5a000;
     border-radius: 0 0 54px 0;
     z-index: 4;
 }
@@ -550,7 +580,7 @@
 .service-card {
     background: #fff;
     border-radius: 20px;
-    border: 1.8px solid #f4b235;
+    border: 1.8px solid #f5a000;
     margin: 12px;
     padding: 20px;
     min-height: 200px;
@@ -564,7 +594,7 @@
 .service-card h3 {
     font-size: 18px;
     font-weight: 700;
-    color: #f4b235;
+    color: #f5a000;
     margin-bottom: 12px;
 }
 
@@ -600,7 +630,7 @@
     width: 22px;
     height: 8px;
     border-radius: 10px;
-    background: #f4b235;
+    background: #f5a000;
     opacity: 0.25;
     cursor: pointer;
 }
@@ -638,35 +668,53 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 6px 14px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     color: #f5a000;
     background: transparent;
+    border: 1px solid #f5a000;
     border-radius: 0.5rem;
     overflow: hidden;
-    border: 1px solid #f5a000;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
 
-/* Ensure text stays above accent */
-.primary-btn span,
-.primary-btn::after {
+/* liquid effect background */
+.primary-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* start hidden on the left */
+    width: 100%;
+    height: 100%;
+    background: #f5a000;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* keep text above */
+.primary-btn span {
     position: relative;
     z-index: 1;
 }
 
-/* Hover animations */
+/* hover state */
 .primary-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    background-color: #f5a000;
     color: #fff;
 }
 
-.primary-btn:hover .btn-accent {
-    transform: scaleX(1);
+/* animate background on hover */
+.primary-btn:hover::before {
+    left: 0;
+    /* move into place from left to right */
 }
+
+
 
 /************************************* Gallery Section  **************/
 .gallery-section {
@@ -680,7 +728,7 @@
 .gallery-section h1 {
     font-size: 32px;
     margin-bottom: 30px;
-    color: #f4b235;
+    color: #f5a000;
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -719,7 +767,7 @@
 .gallery-section::after {
     content: '';
     position: absolute;
-    border: 3.5px solid #f4b235;
+    border: 3.5px solid #f5a000;
     box-sizing: border-box;
     z-index: 1;
 }
@@ -812,18 +860,50 @@
 }
 
 .view-all-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #ffcc00;
     padding: 6px 18px;
     border-radius: 12px;
     color: #ffcc00;
     background: transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+/* liquid background */
+.view-all-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* start hidden */
+    width: 100%;
+    height: 100%;
+    background: #ffcc00;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* keep text above */
+.view-all-btn span {
+    position: relative;
+    z-index: 1;
 }
 
 .view-all-btn:hover {
-    background: #ffcc00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     color: #000;
+}
+
+.view-all-btn:hover::before {
+    left: 0;
+    /* slide background in from left to right */
 }
 
 .slick-slide {
