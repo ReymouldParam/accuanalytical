@@ -165,7 +165,7 @@
     display: inline-block;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #ffffff;
-    padding: 12px 28px;
+    padding: 8px 20px;
     border-radius: 30px;
     color: #fff;
     font-weight: 600;
@@ -245,7 +245,7 @@
 
 /* *************************** Section 2 */
 .accreditations-section {
-    background: #f5a200;
+    background: #f4b235;
     width: 90%;
     margin: 2% auto;
     /* orange shade */
@@ -380,13 +380,13 @@
     display: flex;
     align-items: center;
     /* margin-top: 18px; */
-    padding: 10px 32px 10px 30px;
+    padding: 8px;
     color: #f4b235;
     background: #fff;
-    border: 2px solid #f4b235;
+    border: 1px solid #f4b235;
     border-radius: 13px;
-    font-size: 1.09rem;
-    font-weight: 500;
+    font-size: 14px;
+    /* font-weight: 500; */
     text-decoration: none;
     box-sizing: border-box;
     transition: background 0.2s, color 0.2s;
@@ -623,6 +623,49 @@
     font-size: 1.8rem;
     cursor: pointer;
     color: #232323;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Main button */
+.primary-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f5a000;
+    background: transparent;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #f5a000;
+}
+
+/* Ensure text stays above accent */
+.primary-btn span,
+.primary-btn::after {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover animations */
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    background-color: #f5a000;
+    color: #fff;
+}
+
+.primary-btn:hover .btn-accent {
+    transform: scaleX(1);
 }
 
 /************************************* Gallery Section  **************/
