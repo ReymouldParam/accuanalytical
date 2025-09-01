@@ -162,8 +162,8 @@ body {
 
 /* ORANGE solid button */
 .btn-orange {
-    background: #f7a400;
-    color: #000;
+    background: transparent;
+    color: #e69600;
     border: 2px solid #f7a400;
 }
 
