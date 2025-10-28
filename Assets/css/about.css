@@ -125,7 +125,7 @@ body {
 }
 
 /* Base button */
-.btn {
+.button-btn {
     position: relative;
     display: inline-flex;
     align-items: center;
