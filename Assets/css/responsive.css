@@ -426,6 +426,10 @@
         max-width: 88%;
     }
 
+    .Banner-card-title {
+        font-size: 28px;
+    }
+
     .top-row {
         gap: 24px;
     }
@@ -481,7 +485,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 300px;
+        /* height: 300px; */
         width: 96%;
         margin: 12px auto;
         border-radius: 24px;
@@ -492,10 +496,18 @@
         max-width: 92%;
     }
 
+    .Banner-card-title {
+        font-size: 28px;
+    }
+
     .top-row {
         flex-direction: column;
         align-items: stretch;
         gap: 18px;
+    }
+
+    .banner-cardtitle {
+        font-size: 18px;
     }
 
     .features {
@@ -544,9 +556,8 @@
 
 @media (max-width: 576px) {
     .hero {
-        height: 240px;
         border-radius: 20px;
-        width: 96%;
+        width: 95%;
         margin: 10px auto;
     }
 
@@ -560,6 +571,10 @@
     }
 
     .title {
+        font-size: 28px;
+    }
+
+    .Banner-card-title {
         font-size: 28px;
     }
 
