@@ -526,6 +526,9 @@
     color: #232323;
     margin-bottom: 20px;
     font-weight: 500;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 15px;
 }
 
 /* ===== Main Tabs ===== */
