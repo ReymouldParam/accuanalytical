@@ -17,8 +17,17 @@
     }
 
     .gallery-container {
-        max-width: 1400px;
+        max-width: 1785px;
     }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 32px;
+        object-fit: cover;
+    }
+
 }
 
 @media (min-width: 2560px) {
