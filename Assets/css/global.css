@@ -8,10 +8,6 @@
     font-family: "Poppins";
 }
 
-body {
-    overflow-x: hidden;
-}
-
 /* Header Container */
 .header {
     display: flex;
@@ -123,6 +119,7 @@ body {
     color: #fff;
     padding: 20px 20px 10px;
     font-family: 'Poppins', sans-serif;
+    margin-bottom: -60px;
 }
 
 /* Top Section: Address (Left) + Newsletter (Right) */
@@ -321,30 +318,39 @@ body {
     background-color: #004080;
 }
 
-/********************* whatsapp container */
+
+/********************* WhatsApp Container *********************/
 .whatsapp-container {
-    position: sticky;
+    position: fixed;
+    /* fixed instead of sticky */
     bottom: 20px;
     right: 20px;
     width: 60px;
-    text-align: right;
     height: 60px;
     z-index: 9999;
     background-color: transparent;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     pointer-events: auto;
+}
+
+.whatsapp-container a {
+    text-decoration: none;
 }
 
 .whatsapp-container i {
     font-size: 48px;
     color: #25D366;
-    justify-content: flex-end;
     animation: whatsappbeat 1.5s infinite;
     transition: transform 0.3s ease;
 }
 
+.whatsapp-container i:hover {
+    transform: scale(1.2);
+}
+
+/* WhatsApp icon animation */
 @keyframes whatsappbeat {
 
     0%,
