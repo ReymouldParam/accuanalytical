@@ -926,6 +926,7 @@
     height: 250px;
     width: 200px;
     margin: 5px;
+    overflow: auto;
 }
 
 .review-header {
@@ -942,7 +943,7 @@
 
 .reviewer-info {
     flex: 1;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .reviewer-info h4 {
