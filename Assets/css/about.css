@@ -74,7 +74,7 @@ body {
     background: #fff;
     color: #000;
     border-radius: 12px;
-    padding: 15px 20px;
+    padding: 15px 15px;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
@@ -258,7 +258,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 7%;
 }
 
 .accreditations-image img {

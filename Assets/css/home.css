@@ -286,11 +286,16 @@
     color: #000;
 }
 
+
+.accreditations img {
+    height: 120px;
+}
+
 .accreditations-container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 7%;
 }
 
 .accreditations-image img {
