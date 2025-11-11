@@ -57,3 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Replace the current state with a new state without the query parameters
     history.replaceState(null, null, baseUrl);
 });
+
+
+
+// ********************************* Footer Year Update *********************************
+document.getElementById("year").textContent = new Date().getFullYear();
