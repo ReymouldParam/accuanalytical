@@ -116,24 +116,209 @@
             <!-- Right Form -->
             <div class="contact-right">
                 <h3>Request A Test Or Service</h3>
-                <form action="contact.php" method="POST">
-                    <input type="text" name="name" placeholder="Enter Full Name*" required>
-                    <input type="email" name="email" placeholder="Email Address*" required>
-                    <input type="text" name="number" placeholder="Phone Number*" required>
-                    <input type="text" name="organization" placeholder="Organization / Pharma Company Name">
-                    <input type="text" name="testing_type" placeholder="Type of Testing Required">
+                <form action="contact.php" method="POST" class="nmr-form">
+                    <!-- Organization / Contact Details -->
+                    <fieldset class="form-section">
+                        <legend>Organization & Contact Details</legend>
 
-                    <!-- Textarea with character counter -->
-                    <div class="textarea-wrapper">
-                        <textarea name="message" id="message" placeholder="Your Message / Details"
-                            maxlength="300"></textarea>
-                        <div class="char-count"><span id="charCount">0</span>/300</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full_name">Full Name*</label>
+                                <input type="text" id="full_name" name="full_name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="organization">Organization Name*</label>
+                                <input type="text" id="organization" name="organization" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number*</label>
+                                <input type="text" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- NMR Tests Required -->
+                    <div class="nmr-tests">
+
+                        <!-- Section Title -->
+                        <h3 class="section-title">NMR Tests Required</h3>
+                        <p class="section-subtitle">Select all applicable tests.</p>
+
+                        <!-- Grid Wrapper -->
+                        <div class="nmr-grid">
+
+                            <!-- Column 1 -->
+                            <div class="nmr-column">
+                                <h4>Nuclei</h4>
+
+                                <label><input type="checkbox" name="tests[]" value="1H"> ¹H</label>
+                                <label><input type="checkbox" name="tests[]" value="13C"> ¹³C</label>
+                                <label><input type="checkbox" name="tests[]" value="19F"> ¹⁹F</label>
+                                <label><input type="checkbox" name="tests[]" value="31P"> ³¹P</label>
+                                <label><input type="checkbox" name="tests[]" value="11B"> ¹¹B</label>
+                            </div>
+
+                            <!-- Column 2 -->
+                            <div class="nmr-column">
+                                <h4>1D / Basic</h4>
+
+                                <label><input type="checkbox" name="tests[]" value="DEPT"> DEPT</label>
+                                <label><input type="checkbox" name="tests[]" value="APT"> APT</label>
+                                <label><input type="checkbox" name="tests[]" value="NOESY1D"> NOESY 1D</label>
+                                <label><input type="checkbox" name="tests[]" value="ROESY1D"> ROESY 1D</label>
+                                <label><input type="checkbox" name="tests[]" value="TOCSY1D"> TOCSY 1D</label>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="nmr-column">
+                                <h4>2D Correlation</h4>
+
+                                <label><input type="checkbox" name="tests[]" value="HSQC"> ¹H–¹³C HSQC</label>
+                                <label><input type="checkbox" name="tests[]" value="HMQC"> ¹H–¹³C HMQC</label>
+                                <label><input type="checkbox" name="tests[]" value="HMBC"> ¹H–¹³C HMBC</label>
+                                <label><input type="checkbox" name="tests[]" value="gCOSY"> gCOSY</label>
+                                <label><input type="checkbox" name="tests[]" value="TOCSY2D"> TOCSY 2D</label>
+                            </div>
+
+                            <!-- Column 4 -->
+                            <div class="nmr-column">
+                                <h4>Advanced / Others</h4>
+
+                                <label><input type="checkbox" name="tests[]" value="NOESY2D"> NOESY 2D</label>
+                                <label><input type="checkbox" name="tests[]" value="ROESY2D"> ROESY 2D</label>
+                                <label><input type="checkbox" name="tests[]" value="HOESY2D"> HOESY 2D</label>
+                                <label><input type="checkbox" name="tests[]" value="D2O_EXCHANGE"> D₂O Exchange</label>
+                                <label><input type="checkbox" name="tests[]" value="CIGAR"> CIGAR</label>
+                                <label><input type="checkbox" name="tests[]" value="VTNMR"> VT NMR</label>
+                                <label><input type="checkbox" name="tests[]" value="15N_HSQC"> ¹⁵N HSQC</label>
+                                <label><input type="checkbox" name="tests[]" value="15N_HMBC"> ¹⁵N HMBC</label>
+                                <label><input type="checkbox" name="tests[]" value="QNMR"> QNMR</label>
+                            </div>
+
+                        </div>
                     </div>
 
+
+                    <!-- Sample Details -->
+                    <fieldset class="form-section">
+                        <legend>Sample Details</legend>
+                        <p class="help-text">Provide details for up to 4 samples.</p>
+
+                        <div class="sample-grid">
+                            <!-- Sample 1 -->
+                            <div class="sample-card">
+                                <h4>Sample 1</h4>
+                                <div class="form-group">
+                                    <label for="sample_name_1">Sample Name / Code</label>
+                                    <input type="text" id="sample_name_1" name="sample_name_1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="solvent_1">Solvent</label>
+                                    <input type="text" id="solvent_1" name="solvent_1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="test_for_sample_1">Test Required</label>
+                                    <input type="text" id="test_for_sample_1" name="test_for_sample_1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="structure_1">Structure / Formula</label>
+                                    <input type="text" id="structure_1" name="structure_1">
+                                </div>
+                            </div>
+
+                            <!-- Sample 2 -->
+                            <div class="sample-card">
+                                <h4>Sample 2</h4>
+                                <div class="form-group">
+                                    <label for="sample_name_2">Sample Name / Code</label>
+                                    <input type="text" id="sample_name_2" name="sample_name_2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="solvent_2">Solvent</label>
+                                    <input type="text" id="solvent_2" name="solvent_2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="test_for_sample_2">Test Required</label>
+                                    <input type="text" id="test_for_sample_2" name="test_for_sample_2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="structure_2">Structure / Formula</label>
+                                    <input type="text" id="structure_2" name="structure_2">
+                                </div>
+                            </div>
+
+                            <!-- Sample 3 -->
+                            <div class="sample-card">
+                                <h4>Sample 3</h4>
+                                <div class="form-group">
+                                    <label for="sample_name_3">Sample Name / Code</label>
+                                    <input type="text" id="sample_name_3" name="sample_name_3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="solvent_3">Solvent</label>
+                                    <input type="text" id="solvent_3" name="solvent_3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="test_for_sample_3">Test Required</label>
+                                    <input type="text" id="test_for_sample_3" name="test_for_sample_3">
+                                </div>
+                                <div class="form-group">
+                                    <label for="structure_3">Structure / Formula</label>
+                                    <input type="text" id="structure_3" name="structure_3">
+                                </div>
+                            </div>
+
+                            <!-- Sample 4 -->
+                            <div class="sample-card">
+                                <h4>Sample 4</h4>
+                                <div class="form-group">
+                                    <label for="sample_name_4">Sample Name / Code</label>
+                                    <input type="text" id="sample_name_4" name="sample_name_4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="solvent_4">Solvent</label>
+                                    <input type="text" id="solvent_4" name="solvent_4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="test_for_sample_4">Test Required</label>
+                                    <input type="text" id="test_for_sample_4" name="test_for_sample_4">
+                                </div>
+                                <div class="form-group">
+                                    <label for="structure_4">Structure / Formula</label>
+                                    <input type="text" id="structure_4" name="structure_4">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Additional Message -->
+                    <fieldset class="form-section">
+                        <legend>Additional Information</legend>
+                        <div class="textarea-wrapper">
+                            <label for="message">Your Message / Additional Details</label>
+                            <textarea name="message" id="message" maxlength="300"></textarea>
+                            <div class="char-count">
+                                <span id="charCount">0</span>/300
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit -->
                     <div class="form-submit">
                         <button type="submit">Submit Request</button>
                     </div>
                 </form>
+
+
             </div>
         </div>
 
@@ -142,7 +327,7 @@
             <div class="find-us-container">
                 <!-- Left: Office Image -->
                 <div class="find-us-image">
-                    <img src="Assets/images/Accu-team.jpg" alt="Office Image">
+                    <img src="Assets/images/Accu-mens-team.jpg" alt="Office Image">
                 </div>
 
                 <!-- Middle: Text -->

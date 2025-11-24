@@ -84,8 +84,8 @@
         <!-- Top Nav -->
         <div class="services-top-nav">
             <button class="service-tab active" onclick="showCategory('nmr', event)">NMR TEST</button>
-            <button class="service-tab" onclick="showCategory('icm', event)">ICM SERVICES</button>
-            <button class="service-tab" onclick="showCategory('dip', event)">DIP MASS SERVICES</button>
+            <button class="service-tab" onclick="showCategory('icm', event)">LCMS SERVICES</button>
+            <!-- <button class="service-tab" onclick="showCategory('dip', event)">DIP MASS SERVICES</button> -->
         </div>
 
         <!-- Banner -->
@@ -246,7 +246,7 @@
 
         <!-- ===================== ICM CATEGORY ===================== -->
         <div id="icm" class="category">
-            <h3 class="subcategory-title">ICM TEST</h3>
+            <h3 class="subcategory-title">LCMS TEST</h3>
             <div class="services-grid">
                 <div class="service-card">
                     <h4>CHNS Analysis</h4>
@@ -279,6 +279,34 @@
                 <div class="service-card">
                     <h4>SOR (Solvent/Organic Residue Analysis)</h4>
                     <p>Detects and quantifies residual organic solvents or impurities</p>
+                </div>
+
+                <div class="service-card">
+                    <h4>DIP Basic</h4>
+                    <p>Direct vaporization and ionization of samples (e.g., crude oils) without prior processing.
+                        Provides molecular fingerprints up to m/z 950</p>
+                </div>
+                <div class="service-card">
+                    <h4>Crude Oil Fingerprinting</h4>
+                    <p>Provides a unique mass spectral fingerprint of crude oil samples, used for source identification
+                        and quality comparison</p>
+                </div>
+                <div class="service-card">
+                    <h4>Boiling Point Distribution Analysis</h4>
+                    <p>Estimates volatility profiles based on ion intensities across m/z values — correlates with
+                        boiling ranges</p>
+                </div>
+                <div class="service-card">
+                    <h4>Molecular Composition Mapping</h4>
+                    <p>Entry-level DIP mass spectroscopy test.</p>
+                </div>
+                <div class="service-card">
+                    <h4>DIP Advanced</h4>
+                    <p>Determines the chemical class distribution (e.g., aliphatic vs aromatic, heteroatom content)</p>
+                </div>
+                <div class="service-card">
+                    <h4>Contour Plot Generation (Molecular Weight vs Volatility)</h4>
+                    <p>2D visualization tool to understand composition and distillation behavior</p>
                 </div>
                 <!-- <div class="view-more"><button>View More</button></div> -->
             </div>
@@ -346,7 +374,7 @@
         <div id="dip" class="category">
             <h3 class="subcategory-title">DIP MASS TEST</h3>
             <div class="services-grid">
-                <div class="service-card">
+                <!-- <div class="service-card">
                     <h4>DIP Basic</h4>
                     <p>Direct vaporization and ionization of samples (e.g., crude oils) without prior processing.
                         Provides molecular fingerprints up to m/z 950</p>
@@ -372,7 +400,7 @@
                 <div class="service-card">
                     <h4>Contour Plot Generation (Molecular Weight vs Volatility)</h4>
                     <p>2D visualization tool to understand composition and distillation behavior</p>
-                </div>
+                </div> -->
                 <!-- <div class="view-more"><button>View More</button></div> -->
             </div>
 
@@ -660,8 +688,8 @@
                 bannerTitle.textContent = "NMR TEST";
                 bannerDesc.textContent = "Nuclear Magnetic Resonance (NMR) spectroscopy is one of the most powerful techniques for identifying the structure of organic compounds. It works by observing how atomic nuclei absorb and re-emit electromagnetic radiation in a magnetic field, revealing their physical and chemical properties";
             } else if (category === "icm") {
-                bannerTitle.textContent = "ICM SERVICES";
-                bannerDesc.textContent = "ICM Services provide advanced analysis solutions for pharmaceutical and chemical testing.";
+                bannerTitle.textContent = "LCMS SERVICES";
+                bannerDesc.textContent = "LCMS Services provide advanced analysis solutions for pharmaceutical and chemical testing.";
             } else if (category === "dip") {
                 bannerTitle.textContent = "DIP MASS SERVICES";
                 bannerDesc.textContent = " Direct Insertion Probe-Mass Spectrometry (DIP-MS) is a powerful technique for analyzing crude oils, providing a chemical fingerprint without prior sample processing. Samples are directly vaporized and ionized in the chamber, allowing characterization of components up to m/z 950 based on boiling points. DIP-MS efficiently maps the molecular composition and physical properties of crude oils from various sources. Contour plots of molecular weight versus volatility offer instant insights into oil characteristics, while Principal Component Analysis (PCA) and Hierarchical Cluster Analysis (HCA) help identify similarities and differences, validated against bulk properties such as API gravity and viscosity";
