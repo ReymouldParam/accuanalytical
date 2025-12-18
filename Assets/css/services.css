@@ -71,6 +71,7 @@ body {
     cursor: pointer;
     transition: 0.3s;
     font-size: 14px;
+    text-transform: uppercase;
 }
 
 .service-tab.active {

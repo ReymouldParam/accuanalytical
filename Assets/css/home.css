@@ -605,6 +605,7 @@
     font-weight: 700;
     color: #f5a000;
     margin-bottom: 12px;
+    text-transform: uppercase;
 }
 
 .service-card p {
@@ -782,7 +783,7 @@
 }
 
 .gallery-section::before {
-    top: 17%;
+    top: 100px;
     left: 50px;
     width: 140px;
     height: 43px;

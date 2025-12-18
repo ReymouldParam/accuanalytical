@@ -8,7 +8,10 @@ body {
     margin: 20px auto;
     height: 400px;
     /* adjust height as needed */
-    background: url('../images/about-us-banner.png') no-repeat center center/cover;
+    background-image: url('../images/image\ -\ \(8\).jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center 40%;
     border-radius: 40px;
     /* matches rounded corners */
     overflow: hidden;
